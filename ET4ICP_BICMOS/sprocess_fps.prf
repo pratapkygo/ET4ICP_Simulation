@@ -1,0 +1,2 @@
+set WB_tool(sprocess,exec_mode) batch
+set WB_tool(sprocess,parallel,activate) 1

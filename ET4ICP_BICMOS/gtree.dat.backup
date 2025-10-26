@@ -1,0 +1,70 @@
+# Copyright (C) 1994-2023 Synopsys Inc.
+# swbtree vcurrent, saved by swb
+
+# --- simulation flow
+sprocess sprocess "" {}
+sprocess deviceType "NMOS" {NMOS PMOS} R
+sprocess snDose "5e15" {5e15} R
+sprocess snEnergy "40" {40} R
+sprocess spDose "4e14" {4e14} R
+sprocess spEnergy "20" {20} R
+sprocess nwDose "6e12" {6e12} R
+sprocess nwEnergy "150" {150} R
+sprocess_vtadj sprocess "" {}
+sprocess_vtadj vtAdj "9e11" {9e11} R
+sprocess_vtadj vtAdjEnergy "25" {25} R
+svisual_dopingConc svisual "" {}
+sprocess_dev sprocess "" {}
+sdevice sdevice "" {}
+sdevice fixedCharge "1e11" {1e11 -2e10} R
+svisual_IdVg svisual "" {}
+sdevice_IdVd sdevice "" {}
+svisual_IdVd svisual "" {}
+# --- variables
+# --- scenarios and parameter specs
+scenario default deviceType ""
+scenario default snDose ""
+scenario default snEnergy ""
+scenario default spDose ""
+scenario default spEnergy ""
+scenario default nwDose ""
+scenario default nwEnergy ""
+scenario default vtAdj ""
+scenario default vtAdjEnergy ""
+scenario default fixedCharge ""
+# --- simulation tree
+0 1 0 {} {default} 0
+1 2 1 {NMOS} {default} 0
+2 4 2 {5e15} {default} 0
+3 6 4 {40} {default} 0
+4 8 6 {4e14} {default} 0
+5 10 8 {20} {default} 0
+6 12 10 {6e12} {default} 0
+7 14 12 {150} {default} 0
+8 16 14 {} {default} 0
+9 18 16 {9e11} {default} 0
+10 20 18 {25} {default} 0
+11 22 20 {} {default} 0
+12 24 22 {} {default} 0
+13 26 24 {} {default} 0
+14 28 26 {1e11} {default} 0
+15 30 28 {} {default} 0
+16 32 30 {} {default} 0
+17 34 32 {} {default} 0
+1 3 1 {PMOS} {default} 0
+2 5 3 {5e15} {default} 0
+3 7 5 {40} {default} 0
+4 9 7 {4e14} {default} 0
+5 11 9 {20} {default} 0
+6 13 11 {6e12} {default} 0
+7 15 13 {150} {default} 0
+8 17 15 {} {default} 0
+9 19 17 {9e11} {default} 0
+10 21 19 {25} {default} 0
+11 23 21 {} {default} 0
+12 25 23 {} {default} 0
+13 27 25 {} {default} 0
+14 29 27 {-2e10} {default} 0
+15 31 29 {} {default} 0
+16 33 31 {} {default} 0
+17 35 33 {} {default} 0
